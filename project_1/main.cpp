@@ -1,61 +1,3 @@
-#include <iostream>
-#include <ctime>
-using namespace std;
-
-// Урок #33. Функции. Синтаксис. Объявление, реализация функции. Параметры, аргументы. ---------------------------------------------------------------------------------------------
-
-/*
-
-void foo()
-{
-    cout << "I'm a function, you called me!" << endl;
-}
-
-int Sum(int a, int b)
-{
-    int result;
-
-    result = a + b;
-
-    return result;
-}
-
-double SumDouble(double a, double b, double c)
-{
-    return a + b;
-}
-
-void main()
-{
-    foo();
-    foo();
-
-    foo();
-    foo();
-
-    for (int i = 0; i < 20; i++)
-    {
-        foo();
-    }
-
-    int c;
-    int d;
-    int q = 11;
-    int w = 12;
-
-    c = Sum(2, 5);
-    d = Sum(q, w);
-
-    cout << c << endl;
-    cout << d << endl;
-
-    cout << Sum(7, 35) << endl;
-    cout << SumDouble(7.2, 35.1, 22.0) << endl;
-}
-
-*/
-
-
 //void main()
 //{
 //    setlocale(LC_ALL, "Rus");
@@ -1118,3 +1060,104 @@ void main()
 
     */
 //}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- ФУНКЦИИ */
+// Урок #33. Функции. Синтаксис. Объявление, реализация функции. Параметры, аргументы. ---------------------------------------------------------------------------------------------
+
+/*
+
+#include <iostream>
+using namespace std;
+
+void foo()
+{
+    cout << "I'm a function, you called me!" << endl;
+}
+
+int Sum(int a, int b)
+{
+    int result;
+
+    result = a + b;
+
+    return result;
+}
+
+double SumDouble(double a, double b, double c)
+{
+    return a + b;
+}
+
+void main()
+{
+    foo();
+    foo();
+
+    foo();
+    foo();
+
+    for (int i = 0; i < 20; i++)
+    {
+        foo();
+    }
+
+    int c;
+    int d;
+    int q = 11;
+    int w = 12;
+
+    c = Sum(2, 5);
+    d = Sum(q, w);
+
+    cout << c << endl;
+    cout << d << endl;
+
+    cout << Sum(7, 35) << endl;
+    cout << SumDouble(7.2, 35.1, 22.0) << endl;
+}
+
+*/
+
+
+// Урок #34. Передача параметров в функцию по значению. Параметры функции. Передача аргументов в функцию. --------------------------------------------------------------------------
+
+#include <iostream>
+using namespace std;
+
+void Foo(int a)
+{
+    a++;
+}
+
+int Bar(int a)
+{
+    return a++;
+}
+
+int FooBar(int a)
+{
+    return ++a;
+}
+
+void main()
+{
+    setlocale(LC_ALL, "ru");
+
+    int a = 1;
+    int v = 2;
+
+    int val = 1;
+    int value = 1;
+
+    Foo(a);
+    Foo(v);
+
+    val = Bar(val);
+    value = FooBar(value);
+
+    cout << a << endl;                                                                  // -> 1
+    cout << v << endl;                                                                  // -> 2
+    cout << val << endl;                                                                // -> 1
+    cout << value << endl;                                                              // -> 2
+}
