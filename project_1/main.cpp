@@ -1170,6 +1170,8 @@ void main()
 
 // Урок #35. Передача массива в функцию. Как передать массив в функцию. ------------------------------------------------------------------------------------------------------------
 
+/*
+
 #include <iostream>
 using namespace std;
 
@@ -1203,4 +1205,33 @@ void main()
 
     FillArray(arr, SIZE);
     PrintArray(arr, SIZE);
+}
+
+*/
+
+// Урок #36. Прототипы функций. Прототип функции что это. Прототип функции пример --------------------------------------------------------------------------------------------------
+
+#include <iostream>
+using namespace std;
+
+void foo();
+void foo2(int a, int b);
+
+void main()
+{
+    setlocale(LC_ALL, "ru");
+
+    foo();
+}
+
+void foo()
+{
+    cout << "I'm a function, I was called!" << endl;
+    
+    foo2(5, 6);
+}
+
+void foo2(int a, int b)
+{
+    cout << "I'm a foo2 function, I was called!" << endl;
 }
